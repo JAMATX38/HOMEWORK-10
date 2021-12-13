@@ -1,5 +1,4 @@
 // need to write syntax that defines and exports the manager class
-
 const Employee = require('./Employee')
 
 class Engineer extends Employee{
