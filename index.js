@@ -2,11 +2,11 @@ const path = require("path");
 const inquirer = require("inquirer");
 const fs = require('fs');
 const generateHTML = require('./src/generateHTML');
-const Employee = require('./LIB/Employee');
+const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const { start } = require("repl");
+// const { start } = require("repl");
 const employees = [];
 
 // const { countReset } = require("console");
@@ -43,31 +43,31 @@ let begin = () => {
     })
 }
 
-function generateEngineer () {
+function generateEngineer() {
     inquirer.prompt ([
         {
             type: "input",
             message: "What is the Engineers name?",
-            name: 'engineername',
+            name: 'name',
         },
         {
             type: "input",
             message: "What is the Engineers id?",
-            name: 'engineerid',
+            name: 'id',
         },
         {
             type: "input",
             message: "What is your Engineers email?",
-            name:'engineersemail',
+            name:'email',
         },
         {
             type: "input",
             message: "What is the Engineers Github?",
-            name: 'engineergit',
+            name: 'github',
         }
     ]).then(function (res) {
-        let newEngineer = new Engineer(res.engineername, res.engineerid, res.engineersemail, res.engineergit);
-        employees.push(newEngineer);
+        let engi = new Engineer(res.engineername, res.engineerid, res.engineersemail, res.engineergit);
+        employees.push(engi);
         console.log(employees);
         begin()
     }) 
@@ -79,29 +79,29 @@ function generateIntern() {
         {
             type: "input",
             message: "What is your Intern's name?",
-            name: "Intern",
+            name: "name",
         },
         {
             type: "input",
             message: "What is your Intern's id?",
-            name: "Internid",
+            name: "id",
         },
         {
             type: "input",
             message: "What is your Intern's email?",
-            name: "Internemail",
+            name: "email",
             
         },
         {
             type: "input",
             message: "What is your Intern's school name?",
-            name: 'Internschool',
+            name: 'school',
         },
         ]).then(function (res) {
-            let newIntern = new Intern(res.Intern, res.Internid, res.Internemail, res.Internschool);
-            employees.push(newIntern);
+            let intern = new Intern(res.name, res.id, res.email, res.school);
+            employees.push(intern);
             console.log(employees);
-            start()
+            begin()
         })
 };
 
@@ -132,7 +132,7 @@ function generateManager() {
             let newManager = new Manager(res.Manager, res.Managerid, res.Manageremail, res.Managerofficenumber);
             employees.push(newManager);
             console.log(employees);
-            start()
+            begin()
         })
 };
 
