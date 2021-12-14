@@ -19,5 +19,47 @@
 		"id": "56",
 		"school": "madison",
 		"role": "Intern"
+	},
+	{
+		"name": "Mike",
+		"email": "mike@mike.com",
+		"id": "44",
+		"github": "mikey34",
+		"role": "Engineer"
+	},
+	{
+		"name": "Manni",
+		"email": "manni@manni.com",
+		"id": "99",
+		"office": "98",
+		"role": "Manager"
+	},
+	{
+		"name": "internie",
+		"email": "internie@internie.com",
+		"id": "99",
+		"school": "imtired",
+		"role": "Intern"
+	},
+	{
+		"name": "engi",
+		"email": "engi@engi.com",
+		"id": "88",
+		"github": "engi45",
+		"role": "Engineer"
+	},
+	{
+		"name": "mange",
+		"email": "mange@mange.com",
+		"id": "33",
+		"office": "34",
+		"role": "Manager"
+	},
+	{
+		"name": "interni",
+		"email": "intern@intern.com",
+		"id": "55",
+		"school": "schooltime",
+		"role": "Intern"
 	}
 ]
