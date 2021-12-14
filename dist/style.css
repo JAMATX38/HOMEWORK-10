@@ -1,0 +1,26 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2rem;
+    align-content: space-evenly;
+    
+  }
+
+.jumbotron {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(194, 80, 80);
+    font-size: 24pt;
+    color: white;
+}  
+
+.card-header {
+    background-color: rgb(48, 107, 232);
+    color: white;
+}
+
+.d-flex{
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+}

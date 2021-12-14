@@ -1,0 +1,23 @@
+[
+	{
+		"name": "jaime",
+		"email": "jaime@jaime.com",
+		"id": "66",
+		"github": "jaim38",
+		"role": "Engineer"
+	},
+	{
+		"name": "james",
+		"email": "james@james.com",
+		"id": "52",
+		"office": "52",
+		"role": "Manager"
+	},
+	{
+		"name": "janie",
+		"email": "janie@janie.com",
+		"id": "56",
+		"school": "madison",
+		"role": "Intern"
+	}
+]

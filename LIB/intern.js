@@ -1,19 +1,25 @@
-const Employee = require('./Employee.js');
+const Employee = require("./Employee");
 
+class Intern extends Employee {
+  constructor(name, id, email, school) {
+    super(name, id, email);
+    this.school = school;
+  }
 
-class Intern extends Employee{
-    constructor(name, id, email, school){
-        super(name, id, email)
-        this.school = school
-    }
+  getSchool() {
+    return this.school;
+  }
 
-    getSchool () {
-        return this.school
-    }
+  getRole() {
+    return "Intern";
+  }
 
-    getRole () {
-        return "intern"
-    }
-};
+  getCardContentBody() {
+    let contentBody = super.getCardContentBody();
+    contentBody += `<li class="list-group-item">School: ${this.getSchool()}</li>`;
+
+    return contentBody;
+  }
+}
 
 module.exports = Intern;

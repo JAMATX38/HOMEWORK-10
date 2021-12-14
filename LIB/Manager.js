@@ -1,19 +1,25 @@
-const Employee = require ('./Employee.js');
+const Employee = require("./Employee");
 
+class Manager extends Employee {
+  constructor(name, id, email, officeNumber) {
+    super(name, id, email);
+    this.officeNumber = officeNumber;
+  }
 
-class Manager extends Employee{
-    constructor(name, id, email, officeNumber){
-        super(name, id, email)
-        this.officeNumber = officeNumber
-    }
+  getOfficeNumber() {
+    return this.officeNumber;
+  }
 
-    getOfficeNumber (){
-        return this.officeNumber
-    }
+  getRole() {
+    return "Manager";
+  }
 
-    getRole() {
-        return "Manager"
-    }
-};
+  getCardContentBody() {
+    let contentBody = super.getCardContentBody();
+    contentBody += `<li class="list-group-item">Office Number: ${this.getOfficeNumber()}</li>`;
 
-module.exports = Manager
+    return contentBody;
+  }
+}
+
+module.exports = Manager;
